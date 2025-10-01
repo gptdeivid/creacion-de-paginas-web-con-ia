@@ -1,6 +1,6 @@
 // Animación typing en el hero
 const typingElement = document.querySelector('.typing');
-const words = ['David Cuéllar', 'Desarrollador Web', 'Creativo Digital'];
+const words = ['David Cuéllar', 'Ingeniero de IA', 'Profesor de Ciberseguridad'];
 let wordIndex = 0;
 let charIndex = 0;
 let typing = true;
@@ -59,5 +59,23 @@ document.addEventListener('DOMContentLoaded', () => {
       formMsg.textContent = '¡Mensaje enviado! Gracias por contactarme.';
       form.reset();
     }, 1200);
+  });
+
+  // Animación de revelación al hacer scroll
+  const sections = document.querySelectorAll('.about, .portfolio, .contact');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(20px)';
+    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(section);
   });
 });
