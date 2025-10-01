@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Landing Page Personal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="hero" class="hero">
+    <h1>Hola, soy <span class="typing"></span></h1>
+    <p>Desarrollador web apasionado por la tecnología y la creatividad.</p>
+  </section>
+  <section id="about" class="about">
+    <h2>Sobre mí</h2>
+    <p>Soy un desarrollador web con experiencia en HTML, CSS, JavaScript y frameworks modernos. Me encanta crear soluciones digitales atractivas y funcionales.</p>
+  </section>
+  <section id="portfolio" class="portfolio">
+    <h2>Portfolio</h2>
+    <div class="projects">
+      <div class="project" data-modal="modal1">
+        <h3>Proyecto 1</h3>
+        <p>Descripción breve del proyecto 1.</p>
+        <button>Ver más</button>
+      </div>
+      <div class="project" data-modal="modal2">
+        <h3>Proyecto 2</h3>
+        <p>Descripción breve del proyecto 2.</p>
+        <button>Ver más</button>
+      </div>
+      <div class="project" data-modal="modal3">
+        <h3>Proyecto 3</h3>
+        <p>Descripción breve del proyecto 3.</p>
+        <button>Ver más</button>
+      </div>
+    </div>
+    <!-- Modals -->
+    <div class="modal" id="modal1">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Proyecto 1</h3>
+        <p>Detalles completos del proyecto 1.</p>
+      </div>
+    </div>
+    <div class="modal" id="modal2">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Proyecto 2</h3>
+        <p>Detalles completos del proyecto 2.</p>
+      </div>
+    </div>
+    <div class="modal" id="modal3">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Proyecto 3</h3>
+        <p>Detalles completos del proyecto 3.</p>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <h2>Contacto</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Nombre" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+      <p class="form-message"></p>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2025 Mi Landing Page Personal</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
